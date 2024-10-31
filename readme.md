@@ -8,4 +8,4 @@ This configuration is focused around C++ development.
 - [ ] Add signs in the gutter for whether or not we can fold a section
 - [ ] Use rainbow markers (parentheses, brackets, braces, etc) so we can easily see which are associated with eachother
 - [ ] Add a nice startup screen
-- [ ] Change the theme
+- [x] Change the theme
