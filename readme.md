@@ -9,3 +9,4 @@ This configuration is focused around C++ development.
 - [ ] Use rainbow markers (parentheses, brackets, braces, etc) so we can easily see which are associated with eachother
 - [ ] Add a nice startup screen
 - [x] Change the theme
+- [ ] Debugging capabilities
