@@ -67,7 +67,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "» ", trail = " ", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -79,10 +79,18 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Use treesitter for folding text
--- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
--- vim.opt.foldtext = "v:lua.vim.treesitter.foldtext()"
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- Don't fold code by default
+vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 1
+
+-- Formatting of folded code sections
+-- These options were inspired by this post: https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
+vim.opt.foldtext =
+    [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+vim.opt.fillchars = "fold: "
 
 -- Show fold information in the status column
 vim.opt.foldcolumn = "2"
