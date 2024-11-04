@@ -65,8 +65,11 @@ return {
         },
         highlight = {
             multiline = true,
-            pattern = { [[\b(KEYWORDS):]], [[.*<(KEYWORDS)\s*:]], [[.*\@(KEYWORDS)\s*]] },
+            before = "",
+            keyword = "wide_bg",
+            after = "",
+            pattern = { [[.*<(KEYWORDS):]], [[.*\@(KEYWORDS)]] },
         },
-        pattern = { [[\b(KEYWORDS):]], [[.*<(KEYWORDS)\s*:]], [[.*\@(KEYWORDS)\s*]] },
+        pattern = { [[\b(KEYWORDS):]] },
     },
 }
