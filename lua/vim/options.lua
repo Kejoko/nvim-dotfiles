@@ -90,9 +90,11 @@ vim.opt.foldlevel = 99
 -- These options were inspired by this post: https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
 vim.opt.foldtext =
     [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
-vim.opt.fillchars = "fold: "
 
--- Show fold information in the status column
+-- Change the formatting of the fold icons in the status column so we have arrows
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+-- Show fold information in the status column (currently disabled because we can't get rid of extra numbers indicating fold amount)
 -- vim.opt.foldcolumn = "1"
 
 -- Disable line wrapping
