@@ -93,7 +93,7 @@ vim.opt.foldtext =
 vim.opt.fillchars = "fold: "
 
 -- Show fold information in the status column
-vim.opt.foldcolumn = "2"
+-- vim.opt.foldcolumn = "1"
 
 -- Disable line wrapping
 vim.wo.wrap = false
