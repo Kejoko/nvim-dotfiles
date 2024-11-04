@@ -55,10 +55,10 @@ return {
             mapping = cmp.mapping.preset.insert {
                 -- Select the [n]ext item
                 -- ["<C-n>"] = cmp.mapping.select_next_item(),
-                ["<C-k>"] = cmp.mapping.select_next_item(),
+                ["<C-j>"] = cmp.mapping.select_next_item(), -- <C-j> to go down the list of suggestions
                 -- Select the [p]revious item
                 -- ["<C-p>"] = cmp.mapping.select_prev_item(),
-                ["<C-j>"] = cmp.mapping.select_prev_item(),
+                ["<C-k>"] = cmp.mapping.select_prev_item(), -- <C-k> to go up the list of suggestions
 
                 -- Scroll the documentation window [b]ack / [f]orward
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),

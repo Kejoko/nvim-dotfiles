@@ -67,7 +67,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "» ", trail = " ", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -77,6 +77,25 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Use treesitter for folding text
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- Don't fold code by default
+vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 1
+
+-- Formatting of folded code sections
+-- These options were inspired by this post: https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
+vim.opt.foldtext =
+    [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+
+-- Change the formatting of the fold icons in the status column so we have arrows
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+-- Show fold information in the status column (currently disabled because we can't get rid of extra numbers indicating fold amount)
+-- vim.opt.foldcolumn = "1"
 
 -- Disable line wrapping
 vim.wo.wrap = false
