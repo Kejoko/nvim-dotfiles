@@ -17,5 +17,6 @@ This configuration is focused around C++ development.
 - [ ] Put more spacing between the status column and the text 
 - [ ] Change the current row to be slightly more noticeable
 - [ ] Add a nice startup screen
+- [ ] Make resolving git conflicts nicer
 - [x] Change the theme
 - [ ] Debugging capabilities
