@@ -13,8 +13,10 @@ This configuration is focused around C++ development.
     - [ ] The C++ folds are only showing the return type of the function and not the function name, because function name is on a newline
     - [ ] Don't highlight the entire width of the buffer if we have a fold (only highlight the folded text?)
 - [ ] ~~Use rainbow markers (parentheses, brackets, braces, etc) so we can easily see which are associated with eachother~~
-- [ ] Make the status column have a different background color
+- [ ] Make the status column have a different (brighter) background color
+- [ ] Put more spacing between the status column and the text 
 - [ ] Change the current row to be slightly more noticeable
 - [ ] Add a nice startup screen
+- [ ] Make resolving git conflicts nicer
 - [x] Change the theme
 - [ ] Debugging capabilities
