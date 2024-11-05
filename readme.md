@@ -2,7 +2,12 @@
 
 This is my neovim configuration.
 It was based off of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), then broken down into smaller files and organized as I thought made sense.
-This configuration is focused around C++ development. 
+This configuration is focused around C++ development.
+
+## Depenendencies
+- `npm` (node) for installing some mason packages
+- `cargo` (rust) for installing some mason packages
+- `rg` (ripgrep) for telescope and todo-comments
 
 ## Todo
 - [x] Add signs in the gutter for whether or not we can fold a section
