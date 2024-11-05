@@ -23,5 +23,8 @@ This configuration is focused around C++ development.
 - [ ] Change the current row to be slightly more noticeable
 - [ ] Add a nice startup screen
 - [ ] Make resolving git conflicts nicer
+- [ ] Add ability to open multiple buffers side by side
+- [ ] Add ability to open a terminal
+- [ ] Make it more apparent which buffer is active (clearly determine which buffer we are editing)
 - [x] Change the theme
 - [ ] Debugging capabilities
