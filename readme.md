@@ -32,7 +32,7 @@ This configuration is focused around C++ development.
     - [x] Make NeoTree background darker
     - [x] Open up the current file when we hit `<leader>n`
     - [ ] Fix the icons? Why is there a red box on the modified files line
-    - [ ] Why is the separatting line not directly splitting the file explorer and the editor window
+    - [ ] Why is the separating line not directly splitting the file explorer and the editor window
     - [ ] Try NvimTree
 - [x] Bufferline
     - [x] Make the not currently selected bufferline tabs be darker than the current tab
