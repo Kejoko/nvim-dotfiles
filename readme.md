@@ -18,16 +18,25 @@ This configuration is focused around C++ development.
     - [ ] The C++ folds are only showing the return type of the function and not the function name, because function name is on a newline
     - [ ] Don't highlight the entire width of the buffer if we have a fold (only highlight the folded text?)
 - [ ] ~~Use rainbow markers (parentheses, brackets, braces, etc) so we can easily see which are associated with eachother~~
-- [ ] Make the status column have a different (brighter) background color
+- [ ] ~~Make the status column have a different (brighter) background color~~
 - [ ] Put more spacing between the status column and the text 
-- [ ] Change the current row to be slightly more noticeable
+- [ ] ~~Change the current row to be slightly more noticeable~~
 - [ ] Add a nice startup screen
+    - [ ] Get rid of the default `nvim/` buffer that opens up. This is buffer 1 and we can see a tab created for it in bufferline
 - [ ] Make resolving git conflicts nicer
 - [x] Add ability to open multiple buffers side by side
 - [ ] Add ability to open a terminal
 - [x] Make it more apparent which buffer is active (clearly determine which buffer we are editing) - handled via the nicely colored lualine
 - [x] Change the theme
 - [ ] Debugging capabilities
-- [ ] Make NeoTree background darker
+- [ ] Neo-Tree
+    - [x] Make NeoTree background darker
+    - [ ] Fix the icons? Why is there a red box on the modified files line
+    - [ ] Why is the separatting line not directly splitting the file explorer and the editor window
+    - [ ] Try NvimTree
 - [ ] Bufferline
     - [ ] Make the not currently selected bufferline tabs be darker than the current tab
+    - [ ] Add a blue line above the currently selected tab
+    - [ ] Don't italicize the currently open tab
+    - [ ] Add the buffer number to the beginning of the tab
+    - [ ] Fix the icons so they can actually display
