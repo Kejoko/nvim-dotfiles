@@ -30,6 +30,7 @@ This configuration is focused around C++ development.
 - [x] Change the theme
 - [ ] Neo-Tree
     - [x] Make NeoTree background darker
+    - [x] Open up the current file when we hit `<leader>n`
     - [ ] Fix the icons? Why is there a red box on the modified files line
     - [ ] Why is the separatting line not directly splitting the file explorer and the editor window
     - [ ] Try NvimTree
@@ -40,7 +41,7 @@ This configuration is focused around C++ development.
     - [x] Add the buffer number to the beginning of the tab
     - [x] Fix the icons so they can actually display
     - [ ] Fix the seperator for the file explorer and the left most tab
-- [ ] Incline to show the name of the currently open file in the top of the window
+- [ ] ~~Incline to show the name of the currently open file in the top of the window~~
 - [ ] Python support
 - [ ] Debugging capabilities
     - [ ] C++
