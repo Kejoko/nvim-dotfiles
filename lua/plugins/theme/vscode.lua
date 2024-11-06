@@ -29,6 +29,7 @@ return {
             -- Override colors (see ./lua/vscode/colors.lua in the github repository)
             color_overrides = {
                 -- vscLineNumber = "#FFFFFF",
+                -- vscPink = "#E349D7",
                 vscDarkDark = "#181818",
             },
 

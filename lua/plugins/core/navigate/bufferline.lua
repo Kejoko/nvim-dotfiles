@@ -3,63 +3,110 @@ return {
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
+        local c = require("vscode.colors").get_colors()
+
         require("bufferline").setup {
             options = {
-                -- buffer_close_icon = "",
-                close_command = "bdelete %d",
-                -- close_icon = "",
+                numbers = "buffer_id",
                 indicator = {
+                    -- style = "underline",
                     style = "icon",
-                    icon = " ",
+                    icon = "▎",
                 },
-                left_trunc_marker = "",
+                buffer_close_icon = "󰅖",
+                close_icon = " ",
                 modified_icon = "●",
-                offsets = { { filetype = "neo-tree", text = "EXPLORER", text_align = "center" } },
-                right_mouse_command = "bdelete! %d",
+                left_trunc_marker = "",
                 right_trunc_marker = "",
+                color_icons = false, -- for file type icons
+                offsets = { { filetype = "neo-tree", text = "File Explorer", text_align = "center", separator = false } },
+                right_mouse_command = "bdelete! %d",
+                close_command = "bdelete %d",
                 show_close_icon = false,
                 show_tab_indicators = true,
             },
+
             highlights = {
-                fill = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "StatusLineNC" },
+                ---------------------------------------------------------------
+                -- General
+                ---------------------------------------------------------------
+                numbers = {
+                    fg = c.vscCursorDark,
+                    bg = c.vscDarkDark,
+                },
+                duplicate = {
+                    fg = c.vscCursorDark,
+                    bg = c.vscDarkDark,
                 },
                 background = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "StatusLine" },
+                    fg = c.vscCursorDark,
+                    bg = c.vscDarkDark,
                 },
-                buffer_visible = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "Normal" },
-                },
-                buffer_selected = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "Normal" },
-                },
-                separator = {
-                    fg = { attribute = "bg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "StatusLine" },
-                },
-                separator_selected = {
-                    fg = { attribute = "fg", highlight = "Special" },
-                    bg = { attribute = "bg", highlight = "Normal" },
-                },
-                separator_visible = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "StatusLineNC" },
+                modified = {
+                    fg = c.vscCursorDark,
+                    bg = c.vscDarkDark,
                 },
                 close_button = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "StatusLine" },
+                    fg = c.vscCursorDark,
+                    bg = c.vscDarkDark,
+                },
+                separator = {
+                    fg = c.vscPink,
+                    bg = c.vscDarkDark,
+                },
+
+                ---------------------------------------------------------------
+                -- The buffer is the one we're actively editing
+                ---------------------------------------------------------------
+                numbers_selected = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                    bold = false,
+                    italic = false,
+                },
+                duplicate_selected = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                    italic = false,
+                },
+                buffer_selected = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                    bold = false,
+                    italic = false,
+                },
+                modified_selected = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
                 },
                 close_button_selected = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "Normal" },
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                },
+
+                ---------------------------------------------------------------
+                -- The buffer is the one we have open but it isn't active
+                ---------------------------------------------------------------
+                numbers_visible = {
+                    fg = c.vscFront,
+                    bg = c.vscDarkDark,
+                },
+                duplicate_visible = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                    italic = false,
+                },
+                buffer_visible = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
+                },
+                modified_visible = {
+                    fg = c.vscFront,
+                    bg = c.vscBack,
                 },
                 close_button_visible = {
-                    fg = { attribute = "fg", highlight = "Normal" },
-                    bg = { attribute = "bg", highlight = "Normal" },
+                    fg = c.vscFront,
+                    bg = c.vscBack,
                 },
             },
         }

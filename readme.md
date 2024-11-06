@@ -28,15 +28,19 @@ This configuration is focused around C++ development.
 - [ ] Add ability to open a terminal
 - [x] Make it more apparent which buffer is active (clearly determine which buffer we are editing) - handled via the nicely colored lualine
 - [x] Change the theme
-- [ ] Debugging capabilities
 - [ ] Neo-Tree
     - [x] Make NeoTree background darker
     - [ ] Fix the icons? Why is there a red box on the modified files line
     - [ ] Why is the separatting line not directly splitting the file explorer and the editor window
     - [ ] Try NvimTree
-- [ ] Bufferline
-    - [ ] Make the not currently selected bufferline tabs be darker than the current tab
-    - [ ] Add a blue line above the currently selected tab
-    - [ ] Don't italicize the currently open tab
-    - [ ] Add the buffer number to the beginning of the tab
-    - [ ] Fix the icons so they can actually display
+- [x] Bufferline
+    - [x] Make the not currently selected bufferline tabs be darker than the current tab
+    - [ ] ~~Add a blue line above the currently selected tab~~
+    - [x] Don't italicize the currently open tab
+    - [x] Add the buffer number to the beginning of the tab
+    - [x] Fix the icons so they can actually display
+    - [ ] Fix the seperator for the file explorer and the left most tab
+- [ ] Python support
+- [ ] Debugging capabilities
+    - [ ] C++
+    - [ ] Python
