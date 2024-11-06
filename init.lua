@@ -40,6 +40,7 @@ require("lazy").setup({
     require "plugins.editor.autocomplete",
     require "plugins.editor.autoformat",
     require "plugins.editor.highlight",
+    require "plugins.editor.windows",
     require "plugins.editor.gitsigns",
     require "plugins.editor.indent_line",
     require "plugins.editor.mini",
