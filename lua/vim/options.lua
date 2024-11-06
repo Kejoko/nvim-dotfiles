@@ -18,6 +18,9 @@ vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 
+-- Termguicolors for bufferline to work
+vim.opt.termguicolors = true
+
 -- Indenting and space options
 vim.opt.expandtab = true
 vim.opt.tabstop = 4

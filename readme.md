@@ -23,8 +23,11 @@ This configuration is focused around C++ development.
 - [ ] Change the current row to be slightly more noticeable
 - [ ] Add a nice startup screen
 - [ ] Make resolving git conflicts nicer
-- [ ] Add ability to open multiple buffers side by side
+- [x] Add ability to open multiple buffers side by side
 - [ ] Add ability to open a terminal
 - [x] Make it more apparent which buffer is active (clearly determine which buffer we are editing) - handled via the nicely colored lualine
 - [x] Change the theme
 - [ ] Debugging capabilities
+- [ ] Make NeoTree background darker
+- [ ] Bufferline
+    - [ ] Make the not currently selected bufferline tabs be darker than the current tab
