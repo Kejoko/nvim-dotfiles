@@ -40,6 +40,7 @@ This configuration is focused around C++ development.
     - [x] Add the buffer number to the beginning of the tab
     - [x] Fix the icons so they can actually display
     - [ ] Fix the seperator for the file explorer and the left most tab
+- [ ] Incline to show the name of the currently open file in the top of the window
 - [ ] Python support
 - [ ] Debugging capabilities
     - [ ] C++
