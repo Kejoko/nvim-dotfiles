@@ -20,6 +20,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- replace the word you're on, throughout the whole file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left><Left>]])
 
+-- close the currently open buffer but don't close the currently open window
+vim.keymap.set("n", "<leader>bd", ":bp<bar>sp<bar>bn<bar>bd<CR>")
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -42,3 +45,7 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+-- Keybindings for moving between buffers as we would do in a normal IDE
+vim.keymap.set("n", "<S-h>", ":bp<CR>")
+vim.keymap.set("n", "<S-l>", ":bn<CR>")

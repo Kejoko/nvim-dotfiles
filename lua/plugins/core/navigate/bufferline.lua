@@ -51,7 +51,8 @@ return {
                     bg = c.vscDarkDark,
                 },
                 separator = {
-                    fg = c.vscPink,
+                    -- fg = c.vscPink,
+                    fg = c.vscCursorLight,
                     bg = c.vscDarkDark,
                 },
 
