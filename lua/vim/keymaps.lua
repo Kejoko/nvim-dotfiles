@@ -21,7 +21,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left><Left>]])
 
 -- close the currently open buffer but don't close the currently open window
-vim.keymap.set("n", "<leader>bd", ":bp<bar>sp<bar>bn<bar>bd<CR>")
+vim.keymap.set("n", "<leader>hb", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "[H]ide [B]uffer" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
