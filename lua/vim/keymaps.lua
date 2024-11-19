@@ -18,7 +18,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- replace the word you're on, throughout the whole file
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[R]ename [W]ord in buffer" })
 
 -- close the currently open buffer but don't close the currently open window
 vim.keymap.set("n", "<leader>hb", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "[H]ide [B]uffer" })
