@@ -35,6 +35,7 @@ require("lazy").setup({
     require "plugins.help.which-key",
 
     require "plugins.core.lsp",
+    require "plugins.core.debug",
     require "plugins.core.navigate",
 
     require "plugins.editor.autocomplete",
