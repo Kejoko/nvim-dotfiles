@@ -84,7 +84,7 @@ return {
 
                 -- Rename the variable under your cursor.
                 --  Most Language Servers support renaming across files, etc.
-                map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+                map("<leader>re", vim.lsp.buf.rename, "[R]ename [E]verywhere")
 
                 -- Execute a code action, usually your cursor needs to be on top of an error
                 -- or a suggestion from your LSP for this to activate.
@@ -213,7 +213,10 @@ return {
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
             -- Autoformatting
-            "stylua",
+            "stylua", -- Used to format Lua code
+
+            -- debugging
+            "codelldb",
         })
         require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
