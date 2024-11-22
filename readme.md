@@ -28,7 +28,7 @@ This configuration is focused around C++ development.
 - [ ] Add ability to open a terminal
 - [x] Make it more apparent which buffer is active (clearly determine which buffer we are editing) - handled via the nicely colored lualine
 - [x] Change the theme
-- [ ] Neo-Tree
+- [x] Neo-Tree
     - [x] Make NeoTree background darker
     - [x] Open up the current file when we hit `<leader>n`
     - [ ] Fix the icons? Why is there a red box on the modified files line
@@ -42,7 +42,7 @@ This configuration is focused around C++ development.
     - [x] Fix the icons so they can actually display
     - [ ] Fix the seperator for the file explorer and the left most tab
 - [ ] ~~Incline to show the name of the currently open file in the top of the window~~
-- [ ] Python support
-- [ ] Debugging capabilities
-    - [ ] C++
+- [x] Python support
+- [x] Debugging capabilities
+    - [x] C++
     - [ ] Python

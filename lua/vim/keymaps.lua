@@ -21,15 +21,16 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[R]ename [W]ord in buffer" })
 
 -- close the currently open buffer but don't close the currently open window
-vim.keymap.set("n", "<leader>hb", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "[H]ide [B]uffer" })
+vim.keymap.set("n", "<leader>hb", ":bp<bar>sp<bar>bn<bar>bd!<CR>", { desc = "[H]ide [B]uffer" })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
+-- Open a terminal in the bottom of the current window
+vim.keymap.set("n", "<C-/>", ":split | resize 20 | term <CR> a")
+
+-- Close the terminal
+-- NOTE: This only works in terminal mode
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n> :bd!<CR>", { desc = "Exit terminal mode" })
 
 -- Disable arrow keys in normal mode
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!"<CR>')
