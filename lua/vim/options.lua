@@ -110,3 +110,11 @@ vim.wo.wrap = false
 -- Set the status column to be formatted with a dividing bar
 -- We are currently not using this because we can't find a way to disable this in neo-tree or non-file buffers
 -- vim.wo.statuscolumn = '%C%s%=%{ v:relnum ? v:relnum : v:lnum }%{ v:relnum ? "" : "  " }┃ '
+
+-- Check if we are in a godot project (look for godot project file),
+-- and listen for the godot server if we are
+local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
+if gdproject then
+    io.close(gdproject)
+    vim.fn.serverstart "./godothost"
+end
