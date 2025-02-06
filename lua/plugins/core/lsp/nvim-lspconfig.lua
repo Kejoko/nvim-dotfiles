@@ -237,8 +237,8 @@ return {
             -- debugging
             "codelldb",
 
-            -- -- godot
-            -- "gdtoolkit",
+            -- godot
+            "gdtoolkit",
         })
         require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 

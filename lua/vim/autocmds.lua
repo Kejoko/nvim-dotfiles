@@ -29,3 +29,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.api.nvim_set_hl(0, "NeoTreeTabSeparatorInactive", { bg = "#181818" })
     end,
 })
+
+-- To use tabs instead of spaces in GD Script files
+-- NOTE: This does not currently work, we are leaving it here so we can potentially fix / expand it in the future.
+-- Currently, the tab expansion is given to us in our conditional statement in options.lua where we detect whether
+-- or not we are in a Godot project
+vim.api.nvim_create_autocmd("FileType", {
+    desc = "Set GD Script files to use tabs instead of spaces",
+    pattern = { "*.gd" },
+    group = vim.api.nvim_create_augroup("gdscript-set-tabs", { clear = true }),
+    callback = function()
+        vim.opt.expandtab = false
+    end,
+})

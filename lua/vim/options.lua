@@ -115,6 +115,7 @@ vim.wo.wrap = false
 -- and listen for the godot server if we are
 local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
 if gdproject then
+    vim.opt.expandtab = false
     io.close(gdproject)
     vim.fn.serverstart "./godothost"
 end
