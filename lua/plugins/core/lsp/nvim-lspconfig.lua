@@ -142,6 +142,9 @@ return {
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+        -- Ensure the godot stuff is installed
+        require("lspconfig").gdscript.setup(capabilities)
+
         -- Enable the following language servers
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
         --
@@ -161,6 +164,22 @@ return {
                     "cmake",
                 },
             },
+
+            -- -- godot mode
+            -- gdscript = {
+            --     filetypes = {
+            --         "gd",
+            --         "gdscript",
+            --         "gdscript3",
+            --     },
+            -- },
+            -- gdshader_lsp = {
+            --     cmd = { "gdshader-lsp", "--stdio" },
+            --     filetype = {
+            --         "gdshader",
+            --         "gdshaderinc",
+            --     },
+            -- },
 
             -- scripting
             bashls = {},
@@ -217,6 +236,9 @@ return {
 
             -- debugging
             "codelldb",
+
+            -- godot
+            "gdtoolkit",
         })
         require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
