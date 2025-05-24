@@ -23,6 +23,7 @@ return {
 
             filesystem = {
                 window = {
+                    position = "right",
                     mappings = {
                         ["nc"] = "close_window",
                     },

@@ -117,5 +117,5 @@ local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
 if gdproject then
     vim.opt.expandtab = false
     io.close(gdproject)
-    vim.fn.serverstart "./godothost"
+    vim.fn.serverstart "./godothost_2"
 end
