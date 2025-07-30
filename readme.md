@@ -66,3 +66,7 @@ There is some weirdness still going on with our Godot configuration.
 - [x] Debugging capabilities
     - [x] C++
     - [ ] Python
+- [ ] Find a better key sequence for scrolling through code autocomplete suggestions. Perhaps Shift or Ctrl + J or K? I don't like using the arrow keys to navigate the ocde completion stuff
+- [ ] Let's experiment with different themes. The VS Code theme is no longer scratching the itch ...
+- [ ] Are we able to support bolded terms and italic terms based on syntax? For example, pre processor definitions could be bolded
+
