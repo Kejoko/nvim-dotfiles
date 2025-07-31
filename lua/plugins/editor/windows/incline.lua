@@ -13,16 +13,12 @@ return {
             render = function(props)
                 local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
 
-                if filename == "" then
-                    filename = "[no name]"
-                end
-
                 local is_modified = vim.bo[props.buf].modified
                 local is_current = props.focused
 
                 local fg = c.palette.sumiInk6
                 if is_current then
-                    fg = c.theme.ui.fg
+                    fg = c.palette.dragonWhite
                 end
                 local bg = c.theme.ui.bg
 

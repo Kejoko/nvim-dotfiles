@@ -30,6 +30,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --     end,
 -- })
 
+-- For getting startup to actually work
+vim.api.nvim_create_autocmd("VimEnter", {
+    desc = "Start the Startup plugin",
+    group = vim.api.nvim_create_augroup("startup-startup", { clear = true }),
+    command = "Startup display",
+})
+
 -- To use tabs instead of spaces in GD Script files
 -- NOTE: This does not currently work, we are leaving it here so we can potentially fix / expand it in the future.
 -- Currently, the tab expansion is given to us in our conditional statement in options.lua where we detect whether
