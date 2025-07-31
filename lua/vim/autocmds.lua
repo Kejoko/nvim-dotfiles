@@ -30,6 +30,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --     end,
 -- })
 
+-- For getting our kanagawa color overrides to appear
+vim.api.nvim_create_autocmd("VimEnter", {
+    desc = "Apply kanagawa color overrides",
+    group = vim.api.nvim_create_augroup("kanagawa-compile", { clear = true }),
+    command = "KanagawaCompile",
+})
+
 -- For getting startup to actually work
 vim.api.nvim_create_autocmd("VimEnter", {
     desc = "Start the Startup plugin",
