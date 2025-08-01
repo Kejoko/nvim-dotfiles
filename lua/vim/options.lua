@@ -57,7 +57,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -83,7 +83,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 12
 
 -- Use treesitter for folding text
 vim.opt.foldmethod = "expr"
@@ -110,12 +110,3 @@ vim.wo.wrap = false
 -- Set the status column to be formatted with a dividing bar
 -- We are currently not using this because we can't find a way to disable this in neo-tree or non-file buffers
 -- vim.wo.statuscolumn = '%C%s%=%{ v:relnum ? v:relnum : v:lnum }%{ v:relnum ? "" : "  " }┃ '
-
--- Check if we are in a godot project (look for godot project file),
--- and listen for the godot server if we are
-local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
-if gdproject then
-    vim.opt.expandtab = false
-    io.close(gdproject)
-    vim.fn.serverstart "./godothost_2"
-end

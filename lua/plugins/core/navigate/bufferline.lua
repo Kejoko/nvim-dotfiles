@@ -3,7 +3,8 @@ return {
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-        local c = require("vscode.colors").get_colors()
+        -- local c = require("vscode.colors").get_colors()
+        -- local c = require("kanagawa.colors").setup()
 
         require("bufferline").setup {
             options = {
@@ -26,90 +27,90 @@ return {
                 show_tab_indicators = true,
             },
 
-            highlights = {
-                ---------------------------------------------------------------
-                -- General
-                ---------------------------------------------------------------
-                numbers = {
-                    fg = c.vscCursorDark,
-                    bg = c.vscDarkDark,
-                },
-                duplicate = {
-                    fg = c.vscCursorDark,
-                    bg = c.vscDarkDark,
-                },
-                background = {
-                    fg = c.vscCursorDark,
-                    bg = c.vscDarkDark,
-                },
-                modified = {
-                    fg = c.vscCursorDark,
-                    bg = c.vscDarkDark,
-                },
-                close_button = {
-                    fg = c.vscCursorDark,
-                    bg = c.vscDarkDark,
-                },
-                separator = {
-                    -- fg = c.vscPink,
-                    fg = c.vscCursorLight,
-                    bg = c.vscDarkDark,
-                },
+            -- highlights = {
+            --     ---------------------------------------------------------------
+            --     -- General
+            --     ---------------------------------------------------------------
+            --     numbers = {
+            --         fg = c.vscCursorDark,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     duplicate = {
+            --         fg = c.vscCursorDark,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     background = {
+            --         fg = c.vscCursorDark,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     modified = {
+            --         fg = c.vscCursorDark,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     close_button = {
+            --         fg = c.vscCursorDark,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     separator = {
+            --         -- fg = c.vscPink,
+            --         fg = c.vscCursorLight,
+            --         bg = c.vscDarkDark,
+            --     },
 
-                ---------------------------------------------------------------
-                -- The buffer is the one we're actively editing
-                ---------------------------------------------------------------
-                numbers_selected = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                    bold = false,
-                    italic = false,
-                },
-                duplicate_selected = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                    italic = false,
-                },
-                buffer_selected = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                    bold = false,
-                    italic = false,
-                },
-                modified_selected = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                },
-                close_button_selected = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                },
+            --     ---------------------------------------------------------------
+            --     -- The buffer is the one we're actively editing
+            --     ---------------------------------------------------------------
+            --     numbers_selected = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --         bold = false,
+            --         italic = false,
+            --     },
+            --     duplicate_selected = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --         italic = false,
+            --     },
+            --     buffer_selected = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --         bold = false,
+            --         italic = false,
+            --     },
+            --     modified_selected = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --     },
+            --     close_button_selected = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --     },
 
-                ---------------------------------------------------------------
-                -- The buffer is the one we have open but it isn't active
-                ---------------------------------------------------------------
-                numbers_visible = {
-                    fg = c.vscFront,
-                    bg = c.vscDarkDark,
-                },
-                duplicate_visible = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                    italic = false,
-                },
-                buffer_visible = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                },
-                modified_visible = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                },
-                close_button_visible = {
-                    fg = c.vscFront,
-                    bg = c.vscBack,
-                },
-            },
+            --     ---------------------------------------------------------------
+            --     -- The buffer is the one we have open but it isn't active
+            --     ---------------------------------------------------------------
+            --     numbers_visible = {
+            --         fg = c.vscFront,
+            --         bg = c.vscDarkDark,
+            --     },
+            --     duplicate_visible = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --         italic = false,
+            --     },
+            --     buffer_visible = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --     },
+            --     modified_visible = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --     },
+            --     close_button_visible = {
+            --         fg = c.vscFront,
+            --         bg = c.vscBack,
+            --     },
+            -- },
         }
     end,
 }
