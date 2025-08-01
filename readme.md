@@ -41,11 +41,10 @@ There is some weirdness still going on with our Godot configuration.
 - [ ] ~~Make the status column have a different (brighter) background color~~
 - [ ] Put more spacing between the status column and the text 
 - [ ] ~~Change the current row to be slightly more noticeable~~
-- [ ] Add a nice startup screen
-    - [ ] Get rid of the default `nvim/` buffer that opens up. This is buffer 1 and we can see a tab created for it in bufferline
-- [ ] Make resolving git conflicts nicer
+- [x] Add a nice startup screen
+    - [ ] ~~Get rid of the default `nvim/` buffer that opens up. This is buffer 1 and we can see a tab created for it in bufferline~~
 - [x] Add ability to open multiple buffers side by side
-- [ ] Add ability to open a terminal
+- [x] Add ability to open a terminal
 - [x] Make it more apparent which buffer is active (clearly determine which buffer we are editing) - handled via the nicely colored lualine
 - [x] Change the theme
 - [x] Neo-Tree
@@ -53,20 +52,21 @@ There is some weirdness still going on with our Godot configuration.
     - [x] Open up the current file when we hit `<leader>n`
     - [ ] Fix the icons? Why is there a red box on the modified files line
     - [ ] Why is the separating line not directly splitting the file explorer and the editor window
-    - [ ] Try NvimTree
+    - [ ] ~~Try NvimTree~~
 - [x] Bufferline
     - [x] Make the not currently selected bufferline tabs be darker than the current tab
     - [ ] ~~Add a blue line above the currently selected tab~~
     - [x] Don't italicize the currently open tab
     - [x] Add the buffer number to the beginning of the tab
     - [x] Fix the icons so they can actually display
-    - [ ] Fix the seperator for the file explorer and the left most tab
+    - [x] Fix the seperator for the file explorer and the left most tab
 - [ ] ~~Incline to show the name of the currently open file in the top of the window~~
 - [x] Python support
 - [x] Debugging capabilities
     - [x] C++
-    - [ ] Python
-- [ ] Find a better key sequence for scrolling through code autocomplete suggestions. Perhaps Shift or Ctrl + J or K? I don't like using the arrow keys to navigate the ocde completion stuff
-- [ ] Let's experiment with different themes. The VS Code theme is no longer scratching the itch ...
-- [ ] Are we able to support bolded terms and italic terms based on syntax? For example, pre processor definitions could be bolded
+    - [x] Python
+    - [ ] GLSL
+- [x] Find a better key sequence for scrolling through code autocomplete suggestions. Perhaps Shift or Ctrl + J or K? I don't like using the arrow keys to navigate the ocde completion stuff
+- [x] Let's experiment with different themes. The VS Code theme is no longer scratching the itch ...
+- [x] Are we able to support bolded terms and italic terms based on syntax? For example, pre processor definitions could be bolded
 
