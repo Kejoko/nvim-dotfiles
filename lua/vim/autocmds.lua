@@ -28,7 +28,22 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --         vim.api.nvim_set_hl(0, "NeoTreeTabSeparatorActive", { bg = "#181818" })
 --         vim.api.nvim_set_hl(0, "NeoTreeTabSeparatorInactive", { bg = "#181818" })
 --     end,
--- })
+-- }
+
+-- Set the sign column to be off when we are in the startup buffer
+vim.api.nvim_create_autocmd("BufEnter", {
+    desc = "Toggle sign column in startup buffer",
+    group = vim.api.nvim_create_augroup("auto-sign_column", { clear = true }),
+    callback = function()
+        local buffer = vim.api.nvim_get_current_buf()
+        local number = vim.api.nvim_buf_get_number(buffer)
+        if number == 1 then
+            vim.opt.signcolumn = "no"
+        else
+            vim.opt.signcolumn = "yes"
+        end
+    end,
+})
 
 -- For getting our kanagawa color overrides to appear
 vim.api.nvim_create_autocmd("VimEnter", {
