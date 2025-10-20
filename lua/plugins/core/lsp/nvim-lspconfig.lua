@@ -15,17 +15,12 @@ return {
         "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-        -- Brief aside: **What is LSP?**
-        --
-        -- LSP is an initialism you've probably heard, but might not understand what it is.
-        --
         -- LSP stands for Language Server Protocol. It's a protocol that helps editors
         -- and language tooling communicate in a standardized fashion.
         --
         -- In general, you have a "server" which is some tool built to understand a particular
         -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
-        -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
-        -- processes that communicate with some "client" - in this case, Neovim!
+        -- are standalone processes that communicate with some "client" - in this case, Neovim!
         --
         -- LSP provides Neovim with features like:
         --  - Go to definition
@@ -145,6 +140,9 @@ return {
         -- Ensure the godot stuff is installed
         require("lspconfig").gdscript.setup(capabilities)
 
+        -- Ensure the GLSL stuff is installed
+        -- require("lspconfig").glsl_analyzer.setup {}
+
         -- Enable the following language servers
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
         --
@@ -157,7 +155,14 @@ return {
         local servers = {
             -- cool guy shit, no girlz allowd
             clangd = {},
-            glsl_analyzer = {},
+            -- glsl_analyzer = {},
+            glsl_analyzer = {
+                filetypes = {
+                    "vert",
+                    "frag",
+                    "glsl",
+                },
+            },
             neocmake = {
                 filetypes = {
                     "CMakeLists.txt",
