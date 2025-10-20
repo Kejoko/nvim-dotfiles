@@ -5,6 +5,7 @@
 require "vim.options"
 require "vim.keymaps"
 require "vim.autocmds"
+require "vim.filetypes"
 
 -------------------------------------------------------------------------------
 -- lazy.nvim to manage plugins

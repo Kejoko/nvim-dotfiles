@@ -15,6 +15,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Disable the size of the lsp log
+vim.lsp.set_log_level "off"
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 
