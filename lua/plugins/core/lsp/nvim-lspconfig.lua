@@ -157,7 +157,13 @@ return {
         local servers = {
             -- cool guy shit, no girlz allowd
             clangd = {},
-            glsl_analyzer = {},
+            glsl_analyzer = {
+                filetypes = {
+                    "vert",
+                    "frag",
+                    "glsl",
+                },
+            },
             neocmake = {
                 filetypes = {
                     "CMakeLists.txt",
