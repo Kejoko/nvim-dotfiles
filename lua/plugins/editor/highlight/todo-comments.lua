@@ -55,7 +55,7 @@ return {
             NOTE = {
                 icon = " ",
                 color = "hint",
-                alt = { "INFO", "note", "info", "brief", "detail" },
+                alt = { "INFO", "note", "info", "brief", "details" },
             },
             TEST = {
                 icon = "⏲ ",
@@ -66,7 +66,7 @@ return {
         highlight = {
             multiline = true,
             before = "",
-            keyword = "wide_bg",
+            keyword = "bg",
             after = "",
             pattern = { [[.*<(KEYWORDS):]], [[.*\@(KEYWORDS)]] },
         },

@@ -233,6 +233,7 @@ return {
         vim.list_extend(ensure_installed, {
             -- Autoformatting
             "stylua", -- Used to format Lua code
+            "clang-format",
 
             -- debugging
             "codelldb",

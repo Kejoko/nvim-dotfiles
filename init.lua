@@ -2,6 +2,7 @@
 -- vim stuff
 -------------------------------------------------------------------------------
 
+require "vim.environment"
 require "vim.options"
 require "vim.keymaps"
 require "vim.autocmds"
