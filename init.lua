@@ -33,43 +33,29 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 require("lazy").setup({
-    require "plugins.help.which-key",
-
-    require "plugins.core.lsp",
-    require "plugins.core.debug",
-    require "plugins.core.navigate",
-
-    require "plugins.editor.autocomplete",
-    require "plugins.editor.autoformat",
-    require "plugins.editor.highlight",
-    require "plugins.editor.helloscreen",
-    require "plugins.editor.windows",
-    require "plugins.editor.gitsigns",
-    require "plugins.editor.indent_line",
-    require "plugins.editor.mini",
-
-    require "plugins.theme",
+    require "plugins.mason",
+    require "plugins.lspconfig",
+    require "plugins.gitsigns",
+    require "plugins.todo-comments",
+    require "plugins.neo-tree",
+    require "plugins.startup-nvim",
+    require "plugins.nvim-treesitter",
+    require "plugins.nvim-treesitter-context",
+    require "plugins.conform",
+    require "plugins.vim-illuminate",
+    require "plugins.telescope",
+    require "plugins.nvim-cmp",
+    require "plugins.autopairs",
+    require "plugins.themes",
 }, {
-    ui = {
-        -- If you are using a Nerd Font: set icons to an empty table which will use the
-        -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-        icons = vim.g.have_nerd_font and {} or {
-            cmd = "⌘",
-            config = "🛠",
-            event = "📅",
-            ft = "📂",
-            init = "⚙",
-            keys = "🗝",
-            plugin = "🔌",
-            runtime = "💻",
-            require = "🌙",
-            source = "📄",
-            start = "🚀",
-            task = "📌",
-            lazy = "💤 ",
-        },
-    },
+  -- additional lazyvim settings here seemingly (ui characters and whatnot??)
 })
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme moonfly")
+-- vim.cmd("colorscheme carbonfox")
+-- vim.cmd("colorscheme citruszest")
+-- vim.cmd("colorscheme cyberdream")
+-- vim.cmd("colorscheme modus")
+-- vim.cmd("colorscheme oldschool")
+

@@ -2,10 +2,6 @@
 -- vim options
 -------------------------------------------------------------------------------
 
--- Disable netrw in favor of dashboard
--- vim.g.loaded_netrwPlugin = 1
--- vim.g.loaded_netrw = 1
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -14,6 +10,9 @@ vim.g.maplocalleader = " "
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+
+-- ensure .h files are recognized as c and not cpp
+vim.g.c_syntax_for_h = 1
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -36,7 +35,7 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
+vim.opt.showmode = true
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -63,7 +62,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
--- Displays w-- hich-key popup sooner
+-- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
@@ -83,11 +82,11 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 12
+vim.opt.scrolloff = 20
 
 -- Use treesitter for folding text
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 -- Don't fold code by default
 vim.opt.foldlevel = 99
@@ -101,12 +100,5 @@ vim.opt.foldtext =
 -- Change the formatting of the fold icons in the status column so we have arrows
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
--- Show fold information in the status column (currently disabled because we can't get rid of extra numbers indicating fold amount)
--- vim.opt.foldcolumn = "1"
-
 -- Disable line wrapping
 vim.wo.wrap = false
-
--- Set the status column to be formatted with a dividing bar
--- We are currently not using this because we can't find a way to disable this in neo-tree or non-file buffers
--- vim.wo.statuscolumn = '%C%s%=%{ v:relnum ? v:relnum : v:lnum }%{ v:relnum ? "" : "  " }┃ '
