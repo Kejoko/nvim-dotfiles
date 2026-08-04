@@ -30,44 +30,45 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --     end,
 -- }
 
--- Set the sign column to be off when we are in the startup buffer
+-- Turn off line numbers and sign columns in the terminal (only on first enter into this terminal).
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = vim.api.nvim_create_augroup("TerminalSettings", { clear = true }),
+  pattern = "*",
+  callback = function()
+      vim.opt.signcolumn = "no"
+      vim.opt.number = false
+      vim.opt.relativenumber = false
+  end,
+})
+
+-- Set the sign column to be off when we are in the startup buffer (or when we enter terminal).
+-- We need to check terminal here, because if we re-enter an already open terminal then
+-- the line numbers and sign column will appear (because it isn't the first entry of the terminal).
+-- Make the startup buffer appear cleanly (no sign column, cursor line, line number column)
 vim.api.nvim_create_autocmd("BufEnter", {
-    desc = "Toggle sign column in startup buffer",
+    desc = "Toggle sign column and numberlines in startup buffer",
     group = vim.api.nvim_create_augroup("auto-sign_column", { clear = true }),
     callback = function()
         local buffer = vim.api.nvim_get_current_buf()
         local number = vim.api.nvim_buf_get_number(buffer)
-        if number == 1 then
+        local is_terminal = vim.bo.buftype == 'terminal'
+        if number == 1 or is_terminal then
             vim.opt.signcolumn = "no"
+            vim.opt.number = false
+            vim.opt.relativenumber = false
+            vim.opt.cursorline = false
         else
             vim.opt.signcolumn = "yes"
+            vim.opt.number = true
+            vim.opt.relativenumber = true
+            vim.opt.cursorline = true
         end
     end,
 })
 
--- For getting our kanagawa color overrides to appear
-vim.api.nvim_create_autocmd("VimEnter", {
-    desc = "Apply kanagawa color overrides",
-    group = vim.api.nvim_create_augroup("kanagawa-compile", { clear = true }),
-    command = "KanagawaCompile",
-})
-
--- For getting startup to actually work
-vim.api.nvim_create_autocmd("VimEnter", {
-    desc = "Start the Startup plugin",
-    group = vim.api.nvim_create_augroup("startup-startup", { clear = true }),
-    command = "Startup display",
-})
-
--- To use tabs instead of spaces in GD Script files
--- NOTE: This does not currently work, we are leaving it here so we can potentially fix / expand it in the future.
--- Currently, the tab expansion is given to us in our conditional statement in options.lua where we detect whether
--- or not we are in a Godot project
-vim.api.nvim_create_autocmd("FileType", {
-    desc = "Set GD Script files to use tabs instead of spaces",
-    pattern = { "*.gd" },
-    group = vim.api.nvim_create_augroup("gdscript-set-tabs", { clear = true }),
-    callback = function()
-        vim.opt.expandtab = false
-    end,
-})
+-- -- For getting startup to actually work
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     desc = "Start the Startup plugin",
+--     group = vim.api.nvim_create_augroup("startup-startup", { clear = true }),
+--     command = "Startup display",
+-- })
